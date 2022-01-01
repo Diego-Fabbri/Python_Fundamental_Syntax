@@ -1,4 +1,5 @@
-#LINK al Video Corso: https://www.youtube.com/watch?v=RjhiMjY1nI0&list=PLP5MAKLy8lP8FAytdm2ncZbPioA9A2SgF&index=3&ab_channel=EdoardoMidali
+#LINK al Video Corso:
+# https://www.youtube.com/watch?v=RjhiMjY1nI0&list=PLP5MAKLy8lP8FAytdm2ncZbPioA9A2SgF&index=3&ab_channel=EdoardoMidali
 
 
 #messaggio = input("Insert something as input:") #Insert a user input
@@ -125,3 +126,177 @@ test = "Hello I am Diego and I\'m \"nice\""
 print(test)
 
 ### BOOLEAN (07)
+x = 0
+y = 1
+
+print(5 < 10) #verify condition
+
+if 5 < 10:
+    print("5 is less than 10")
+else:
+    print("5 is greater than 10")
+
+## List of values that always return a False values using bool() function
+# bool(False)
+# bool(None)
+# bool(0)
+# bool("")
+# bool(())
+# bool([])
+# bool({})
+
+print(bool(x)) # return false because x = 0
+print(bool(y)) # return true because y = 1
+
+things_to_buy = []
+
+print(bool(things_to_buy)) #the list is empty
+
+### MATH OPERATORS (08)
+# Fist is *, second is division the addition and subtraction
+
+x = 15
+y = 7
+# + addition
+# - subtrction
+# * multiply
+# / division
+# % module (remainder after division)
+# ** power
+# // floor division
+
+print(x + y)
+print(x - y)
+print(x*y)
+print(x/y)
+print(x%y)
+print(x**y)
+print(x//y)
+
+## Assignment operators
+x = 5
+x = 5 + x # or x+=2
+          # You can also use -= *= /= .
+          #  There are 5 additional operators in Python
+y = 7
+
+print(x)
+
+## Math Functions
+x = min(5,10,25) # get minimum
+print(x)
+
+x = max(10,15,20) # get maximum
+print(x)
+
+x = abs(-y)       # get absolute value
+print(x)
+
+x = pow(3,2)      # get 5 up to the 2 power
+print(x)
+
+### CONDITIONS: IF, ELIF, ELSE (09)
+x = 5
+
+# basic syntax of if operator
+if x < 10:
+    print("x is less than 10")
+else:
+    print("x is greater than 10")
+
+## Operators to compare
+# == equal to
+# != different
+# < / <= greater than / greater than or equal to
+# > / >= less than / less than or equal to
+
+## elif
+x = 10
+
+if x < 10:
+    print("x is less than 10")
+elif x == 10:
+    print("x is equal to 10")
+else:
+    print("x is greater than 10")
+
+## Logical operators: and, or & not
+x = 10
+y = 5
+
+if x > 10 and x < 20: # both condition have to hold
+    print("x is less than 20 and greater than 10")
+else:
+    print("x is not in [10,20]")
+
+if x == 10 or y == 10: # just one condition has to hold
+    print("condition holds")
+else:
+    print("condition does not hold")
+
+x = 9
+
+if not(x > 10): # it reverses rationale
+    print("condition holds")
+else:
+    print("condition does not hold")
+
+## Short end version of if operator
+
+#Version 1
+if x > 10: print("x is greater than 10") # it works only with one statement
+
+#Version 2
+# ---- if condition ------------------ | ------- else condition ----
+print("x is greater than 10") if x > 10 else print("x is less than 10")
+
+## nested if
+x = 9
+
+if x % 2 == 0:
+        if x < 10:
+            print("x is even")
+            print("x is less than 10")
+else:
+    print("x is odd")
+ 
+
+### LOOPS: WHILE (10)
+
+x = ["Rome","Milan","Cosenza"] 
+
+# basic syntax of while loop
+i = 0
+while i < 6: # until condition holds loop works
+    print(i)
+    i = i + 1
+
+# break: it stops loop's execution
+i = 0
+while i < 6: # until condition holds loop works
+    print(i)
+    if i == 3:
+     print("break loop")   
+     break
+    i = i + 1
+
+# continue: it skips to the next loop's iteration
+i = 0
+while i < 6: # until condition holds loop works
+    i = i + 1
+    if i == 3:
+     print("continue loop, iteration skipped")   
+     continue
+    else:
+        print(i)
+
+# else: it work at the end of while loop's iterations
+i = 0
+while i < 6:
+    print(i)
+    i = i + 1
+else:
+    print("end of while loop")
+
+
+### LOOPS: FOR (11)
