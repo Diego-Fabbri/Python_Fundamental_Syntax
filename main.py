@@ -555,4 +555,186 @@ y = tuple(("Turin","Bologna","New York"))
 
 print(x + y)
 
-# finire video 15
+# COUNT: it counts how many times a value occurs in a tuple
+x = tuple(("Milan","Rome","Cosenza","Milan"))
+print(x.count("Milan"))
+
+# INDEX: it return the index of input value in a tuple (it takes only the first values occurring, it does not take in account duplicates)
+x = tuple(("Milan","Rome","Cosenza"))
+print(x.index("Milan"))
+
+
+### COLLECTION OF DATA: SETS (15)
+# Sets are unorderd, unindexed, uneditable and duplicates not allowing data collections
+
+x = {"Milan","Rome","Cosenza"} # elements of same type VERSION 1
+y = {"Turin", 69, False} # elements of same type
+
+# you can use type(), len()
+
+x = set(("Milan","Rome","Cosenza")) # VERSION 2
+
+# if you want to access elements you have to use loops being sets unordered and unindexed data collections
+# x[0] cannot be used as syntax, even if you print elements they are returned in a different order in output print
+
+for city in x:
+    print(city)
+
+
+# add new elements: add() and update()
+x = set(("Milan","Rome","Cosenza"))
+y = set(("Turin","Bologna","New York"))
+
+x.add("Venice")
+print(x)
+
+x.update(y) 
+print(x)
+
+# remove elements: remove(), pop(), clear(), del
+x = set(("Milan","Rome","Cosenza"))
+
+x.remove("Milan")  #if you put a values which is not contained in the set, remove() will return an error
+x.discard("Rome")  #if you put a values which is not contained in the set, discard() will NOT return an error
+x.pop()  #it removes a random elements because they are not ordered
+
+print(x)
+
+x = set(("Milan","Rome","Cosenza"))
+
+del x 
+
+# union of sets: union(), upadate(), intersection_update(), intersection(), symmetric_difference_update(), symmetric_difference() 
+x = set(("Milan","Rome","Cosenza"))
+y = set(("Turin","Bologna","New York","Rome"))
+
+z = x.union(y) #it creates a new set object (duplicates are not included)
+print(z)
+
+x.update(y) # it puts y elements in x (duplicates are not included)
+print(x)
+
+x = set(("Milan","Rome","Cosenza"))
+y = set(("Turin","Bologna","New York","Rome"))
+
+x.intersection_update(y) # it returns common elements in x and y, it updates an existing set object
+print(x)
+
+x = set(("Milan","Rome","Cosenza"))
+y = set(("Turin","Bologna","New York","Rome"))
+
+z = x.intersection(y) # it returns common elements in x and y and creates a new set object
+print(z)
+
+x = set(("Milan","Rome","Cosenza"))
+y = set(("Turin","Bologna","New York","Rome"))
+
+z = x.symmetric_difference(y) # it returns a new set object containing elements in both x and y without common elements
+print(z)
+
+x.symmetric_difference_update(y) # it return elements in both x and y without common elements
+print(x)
+
+#IMPORTANT: union(), intersection() and symmetric_difference() return a new set object
+#           update(), intersection_update() and symmetric_difference_update() update and existing set object
+
+### DATA COLELCTION: DICTIONARIES DICT (16)
+# Dictionaries are ordered, editable and duplicates not allowing data collections.
+# It a collection of key-value elements
+
+person = { "Name": "Diego", "Cognome": "Fabbri", "Age": 25} # you can duplicate values, keys cannot be duplicated
+
+print(type(person))
+print(len(person))
+
+# access dict elements (keys)
+print(person["Age"])
+print(person.get("Age"))
+
+x = person.keys() # it returns a list with all dict keys
+print(x)
+
+x = person.values() # it returns a list with all dict values
+print(x)
+
+x = person.items() # it returns a list of key-value tuples for the dict object
+print(x)
+
+# verify if a key exists in a dict
+print("Name" in person)
+
+# edit elements' valus in a dict
+person["Name"] = "Mattew"
+print(person)
+
+person.update({"Name": "Andrea"})
+print(person)
+
+# add a key in a dict
+person["Color"] = "Black" # it creates a new key-value
+print(person)
+
+person.update({"Color": "Blue"}) # it updates a key-value object
+print(person)
+
+# remove elements in a dict
+person = { "Name": "Diego", "Cognome": "Fabbri", "Age": 25}
+person.pop("Name") # it removes the input key-value
+print(person)
+
+person = { "Name": "Diego", "Cognome": "Fabbri", "Age": 25}
+person.popitem() #it removes the last key-value
+print(person)
+
+person = { "Name": "Diego", "Cognome": "Fabbri", "Age": 25}
+person.clear() #it removes all key-value in a dict making it empty
+print(person)
+
+person = { "Name": "Diego", "Cognome": "Fabbri", "Age": 25}
+del person["Name"] #it removes input key-value in a dict
+print(person)
+
+del person # it removes the object person
+#print(person) will return and error
+
+# loops on a dict elements
+person = { "Name": "Diego", "Cognome": "Fabbri", "Age": 25}
+
+for x in person: # it returns all dict keys
+    print(x)
+
+for x in person.keys(): # it returns all dict keys
+    print(x)
+
+for x in person: # it returns all dict values
+    print(person[x])
+
+for x in person.values(): # it returns all dict values
+    print(x)
+
+for x,y in person.items(): # it returns all dict key-values tuples
+    print(x,y)
+
+# create a copy of a dict
+x = person.copy() # you can use  x = dict(person)
+print(x)
+
+# x = person with this line of code you create a reference, if you edit person also x will be edited
+
+# nested dict
+person = { 
+    "Name": "Diego", 
+    "Cognome": "Fabbri", 
+    "Age": 25, 
+    "Address" : {
+        "City": "Milan",
+        "Postal Code": 1234,
+        "Street": "My Street"
+    }
+}
+print(person)
+
+# access a nested elements in a dict
+print(person["Address"]["City"])
+
+### FUNCTIONS (17)
