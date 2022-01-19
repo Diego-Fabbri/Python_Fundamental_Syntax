@@ -797,5 +797,3 @@ def make_sum(num_1,num_2):
 x = make_sum(2,5)
 print(x)
 
-### CLASSES and OBJECTS (18)
-
