@@ -5,4 +5,8 @@ This Italian Python course deals with the bases of Python programming language. 
 
 
 
-$\frac{n!}{k!(n-k)!}$
+\begin{align*}
+a & = b \\
+X &\sim {\sf Norm}(10, 3) \\
+5 & \le 10
+\end{align*}
