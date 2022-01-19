@@ -5,4 +5,4 @@ This Italian Python course deals with the bases of Python programming language. 
 
 
 
-\frac{n!}{k!(n-k)!}
+$\frac{n!}{k!(n-k)!}$
