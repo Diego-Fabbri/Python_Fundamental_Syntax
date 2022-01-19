@@ -4,3 +4,4 @@ The script contain my notes about Python's fundamental syntax. The course's vide
 This Italian Python course deals with the bases of Python programming language. It starts from the installation to data: variables, data collections, loops, conditionals, functions and object-oriented programming.
 
 
+<img src="https://latex.codecogs.com/svg.image?\sum&space;\frac{a}{b}&space;\cdot&space;" title="\sum \frac{a}{b} \cdot " />
