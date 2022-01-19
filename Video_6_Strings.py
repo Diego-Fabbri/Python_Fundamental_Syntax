@@ -68,3 +68,6 @@ print(test)
 
 test = "Hello I am Diego and I\'m \"nice\""
 print(test)
+
+
+#### LOOK AT Video_27_String_Formatting_(Advanced)  for further operations
